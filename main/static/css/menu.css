@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
+
+:root {
+    --orange: #ef6848;
+    --black: #181818;
+    --darkGray: #313131;
+    --white: #ffffff;
+    --lightOrange: #ff9c51;
+    --yellowOrange: #ffb650;
+    --placeholder: #8f8f8f;
+
+  /* To Use Variables Do This : var(--white) */
+}
+
+body {
+    display: none;
+}
+
+
+@media only screen and (max-width: 500px){
+
+    .MenuPage{
+        display: block;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: var(--black);
+        font-family: "Raleway", sans-serif;
+    }
+
+    .MenuPage .CuisineName{
+        color: white;
+        margin-left: 1em;
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 3px;
+        border-bottom: 2px solid #ef6848;
+        width: 8em;
+        line-height: 2em;
+    }
+
+    .MenuPage .ItemList .dish{
+        margin: 1em;
+        color: white;
+        /* padding-top: 1px; */
+        padding: 0.1em;
+        text-align: left;
+        background-color: #212529;
+        height: 4.5em;
+        line-height: 1px;
+        letter-spacing: 2px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 10px 3px black;
+    }
+
+    .MenuPage .ItemList .price{
+        color: #ef6848;
+    }
+
+    .MenuPage .ItemList .dish .wrapper{
+        display: flex;
+    }
+
+    .MenuPage .ItemList .dish .wrapper .item{
+        flex: 3;
+    }
+    .MenuPage .ItemList .dish .wrapper .b{
+        flex: 1;
+    }
+    
+
+    .MenuPage .ItemList .dish button{
+        width: 4em;
+        margin-top: 1em;
+        height: 1.2em;
+    }
+
+    .MenuPage >.ItemList h5{
+        margin-left: 1em;
+        margin-top: 13px;
+    }
+
+    .MenuPage .ItemList h6{
+        margin-left: 1em;
+        color: var(--orange);
+    }
+
+
+
+}
