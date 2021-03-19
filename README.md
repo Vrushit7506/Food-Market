@@ -1,10 +1,12 @@
 # Food-Market
 
 ## Things Completed When You Were Not There
-  [x] Register App Created
-  [x]
-  [x]
-  [x]
-  [x]
-  [x]
-  [x]
+  - [x] Register App Created
+  - [x] Register And Menu HTML Pages Added
+  - [x] User Database Created
+  - [x] User Form Created Using CRISPY FORMS
+  - [x] User Registration Form Verification Done
+  - [x] On Submitting Form Redirects To Home Page
+  - [x] CRISPY FORM css Done
+  - [x] Minor Changes In URL Routing
+  - [x] Chat-Bot Message Database Created
