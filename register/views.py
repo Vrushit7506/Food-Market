@@ -29,4 +29,4 @@ class registerForm(TemplateView):
             return redirect(reverse('home'))
         else:
             form = UserRegisterForm()
-            return redirect(request, 'register/register.html', {'form': form})
+            return render(request, 'register/register.html', {'form': form})
