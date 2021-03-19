@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'register.apps.RegisterConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+CRISPY_TEMPLATES_PACK = 'bootstrap4'

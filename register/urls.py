@@ -5,5 +5,5 @@ app_name = "register"
 
 
 urlpatterns = [
-    path('', views.register, name = 'registerPage'),
+    path('', views.registerForm.as_view(), name = 'registerPage'),
 ]
