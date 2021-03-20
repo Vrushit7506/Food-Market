@@ -10,6 +10,8 @@
   - [x] CRISPY FORM css Done
   - [x] Minor Changes In URL Routing
   - [x] Chat-Bot Message Database Created
+  - [x] Chat-Bot Filling Database
+  - [x] Displays Chat-Message From Data-base 
 
 To Do List : 
 https://docs.google.com/spreadsheets/d/1Itw-u5CuxJJKdnHWDeFgAKQb_JpYaZmpgbGX8ag7uDs/edit?usp=sharing
