@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.urls import reverse
 from django.contrib import messages
 from .forms import UserRegisterForm
+from register.models import *
 
 
 # def register(request):
@@ -19,6 +20,7 @@ from .forms import UserRegisterForm
 
 class registerForm(TemplateView):
     def get(self, request):
+        # User.objects.all().delete()
         form = UserRegisterForm()
         return render(request, 'register/register.html', {'form': form})
     

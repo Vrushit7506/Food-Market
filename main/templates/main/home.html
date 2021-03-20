@@ -15,7 +15,7 @@
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
     crossorigin="anonymous" />
 
-  
+
 
   <link rel="stylesheet" href="{% static '/css/styles.css' %}">
   <link rel="stylesheet" href="{% static '/css/home.css' %}">
@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="{% static '/css/explore.css' %}">
   <link rel="stylesheet" href="{% static '/css/chat.css' %}">
   <link rel="stylesheet" href="{% static './css/order.css' %}">
-  
+
   <!-- End CSS -->
 
   <title>Home - FSE</title>
@@ -319,7 +319,19 @@
         </p>
       </div>
       <br>
-      <div class="chat">
+
+      {% for i in allChat %}
+
+      <div class="chat {{i.className}}">
+        <p>{{i.text}}</p>
+      </div>
+      <br>
+
+      {% endfor %}
+
+
+
+      <!-- <div class="chat">
         <p>Lorem ipsum dolor sit amet.</p>
       </div>
       <br>
@@ -357,7 +369,7 @@
       <br>
       <div class="chat accepted">
         <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-      </div>
+      </div> -->
     </div>
     <div class="chatUser disable">
       <button class="noBtn">
