@@ -7,6 +7,7 @@ root {
   --white: #ffffff;
   --lightOrange: #ff9c51;
   --yellowOrange: #ffb650;
+  --placeholder: #8f8f8f;
 }
 
 /* body {
@@ -99,4 +100,79 @@ root {
     font-family: "Raleway", sans-serif;
     backdrop-filter: blur(3px);
   }
+
+  .explorePage .topHorizontal {
+    /*FireFox*/
+    scrollbar-width: none;
+    /*IE10+*/
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .explorePage .topHorizontal::-webkit-scrollbar {
+    /*Chrome, Safari, Edge*/
+    display: none;
+  }
+
+  .explorePage .topHorizontal {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+    margin-top: 0;
+  }
+
+  .explorePage .topHorizontal ul {
+    padding: 0 20px;
+  }
+
+  .explorePage .topHorizontal ul li {
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 500;
+    color: #8f8f8f;
+  }
+
+  .explorePage .topHorizontal ul li.active {
+    color: var(--orange);
+    position: relative;
+  }
+
+  .explorePage .topHorizontal ul li.active::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -10px;
+    left: 48%;
+    background-color: var(--orange);
+  }
+
+  .explorePage .cusines {
+    display: none;
+    max-height: calc(100vh - 125px);
+  }
+
+  .explorePage .cusines.active {
+    display: block;
+  }
+
+  footer .footerGrid li.active {
+    background-color: #2b2b2b;
+    border-radius: 25px;
+    width: 100px;
+    position: relative;
+    /* box-shadow: 2px 2px 4px #030303c4; */
+    border: 2px solid #181818;
+    border-style: ridge;
+    box-shadow: -7px -7px 15px rgba(70, 70, 70, 0.575), 5px 5px 15px #030303c4;
+    box-shadow: -7px -7px 15px rgba(46, 46, 46, 0.575), 5px 5px 15px #030303c4;
+  }
+
+  /* footer .footerGrid li.active span {
+    display: inline-block;
+    position: absolute;
+    color: var(--orange);
+    top: 9px;
+    left: 45px;
+  } */
+
 }
