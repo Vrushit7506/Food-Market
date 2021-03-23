@@ -15,5 +15,5 @@ class UserRegisterForm(forms.ModelForm):
     widgets = {
         'name': forms.TextInput(attrs={'placeholder': 'Your Name','required':'required'}),
         'tableNo':forms.NumberInput(attrs={'placeholder':'Your Table Number','required':'required','min':1,'max':25}),
-        'phoneNum':forms.TextInput(attrs={'placeholder':'Your Contact Number','required':'required'}),
+        'phoneNum':forms.NumberInput(attrs={'placeholder':'Your Contact Number','required':'required'}),
     }
