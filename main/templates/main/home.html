@@ -39,7 +39,7 @@
 	<!-- ------------------------------------------- -->
 	<!-- Start Main -->
 
-	<main class="homePage mainSection active" id="homePage">
+	<main class="homePage mainSection" id="homePage">
 		<div class="search">
 			<h3>What do you want to cook today?</h3>
 			<form action="">
@@ -211,7 +211,7 @@
 		<div class="cuisinelisting">
 			<div class="cusines food active" id="switchfood">
 				{% for cuisine in allcuisine %}
-
+				
 				<div class="cuisine1">
 					<div class="photo">
 						<img class="cusinecover" src="{% static '/images/NorthIndian.jpg' %}" alt="" />
@@ -221,79 +221,7 @@
 					</div>
 				</div>
 
-				{% endfor %} {% comment %}
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/SouthIndian.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>South Indian</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/Chinese.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Chinese</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/pizza1.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Italian</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/Breads.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Breads</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/mexican.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Mexican</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/snacks.jpeg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Snacks</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/dessert-menu.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Dessert</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/beverages.jpeg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Beverages</h4>
-					</div>
-				</div>
-				{% endcomment %}
+				{% endfor %}
 			</div>
 
 			<div class="cusines drink" id="switchdrink">
@@ -311,71 +239,18 @@
 
 				{% endfor %}
 
-				{% comment %} <div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/rum.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Rum</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/wine.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Wine</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/champagne.jpeg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Champagne</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/moctails.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Moctails</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/whisky.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>whisky</h4>
-					</div>
-				</div>
-
-				<div class="cuisine1">
-					<div class="photo">
-						<img class="cusinecover" src="{% static '/images/taquila.jpg' %}" alt="" />
-					</div>
-					<div class="label">
-						<h4>Taquila</h4>
-					</div>
-				</div> {% endcomment %}
 			</div>
 		</div>
 	</main>
 	<!-- Explore Page Ends here -->
 
 	<!-- ChatBot Page Starts here -->
-	<main class="chatBotPage mainSection" id="chatBotPage">
+	<main class="chatBotPage mainSection active" id="chatBotPage">
 		<div class="intro">
 			<h1>Lorem ipsum</h1>
 			<span>Typing...</span>
 		</div>
-		<div class="chattingArea">
+		<div class="chattingArea messages-area">
 			<div class="chat">
 				<p>
 					Lorem ipsum dolor sit amet.
@@ -386,57 +261,28 @@
 				</p>
 			</div>
 			<br />
+			{% for message in messages %}
+			<div class="chat 
+			    {% if message.sender == request.user %}user_chat{% endif %}">
+				<p>{{message.message}}</p>
+			</div>
+			<br />
+			{% endfor %}
+			<br />
 
-			{% for i in allChat %}
+			<!-- {% for i in allChat %}
 
 			<div class="chat {{i.className}}">
 				<p>{{i.text}}</p>
 			</div>
 			<br />
 
-			{% endfor %}
-
-			<!-- <div class="chat">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat user_chat">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat rejected">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-      </div>
-      <br>
-      <div class="chat user_chat">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat accepted">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat">
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat user_chat">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat rejected">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-      </div>
-      <br>
-      <div class="chat user_chat">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
-      </div>
-      <br>
-      <div class="chat accepted">
-        <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.</p>
-      </div> -->
-
+			{% endfor %} -->
 		</div>
+		<!-- <div class="input-area">
+			<input type="text" id="message-input">
+			<button id="send-btn">Send</button>
+		</div> -->
 		<div class="chatUser disable">
 			<button class="noBtn">
 				<p>No</p>
@@ -557,7 +403,7 @@
 
 	<footer>
 		<div class="footerGrid">
-			<li id="homeSlide" class="footerTab active" onclick="footerSwitch(this, 'homePage')">
+			<li id="homeSlide" class="footerTab" onclick="footerSwitch(this, 'homePage')">
 				<img src="{% static '/images/home.png' %}" alt="" />
 				<img src="{% static '/images/home1.png' %}" alt="" />
 				<span>Home</span>
@@ -567,7 +413,7 @@
 				<img src="{% static '/images/explore1.png' %}" alt="" />
 				<span>Explore</span>
 			</li>
-			<li id="chatSlide" class="footerTab" onclick="footerSwitch(this, 'chatBotPage'); ChatOpen()">
+			<li id="chatSlide" class="footerTab active" onclick="footerSwitch(this, 'chatBotPage'); ChatOpen()">
 				<img src="{% static '/images/chat.png' %}" alt="" />
 				<img src="{% static '/images/chat1.png' %}" alt="" />
 				<span>Chat</span>
@@ -630,6 +476,59 @@
 			var chatArea = document.getElementsByClassName('chattingArea');
 			chatArea[0].scrollTop = chatArea[0].scrollHeight;
 		}
+	</script>
+
+	<script>
+		let message_send_btn = document.getElementById("send-btn");
+		let message_input = document.getElementById("message-input");
+		function send_message() {
+			let message = message_input.value;
+			if (message === "") {
+				return;
+			}
+			message_input.value = "";
+			fetch("{% url 'chatroom-ajax' other_user.id %}",
+				{
+					method: "POST",
+					credentials: 'same-origin',
+					headers: {
+						"Content-Type": 'application/json',
+						'X-CSRFToken': '{{ csrf_token }}'
+					},
+					body: JSON.stringify(message)
+				}
+			).then(e => e.json()).then(messages => {
+				for (message of messages) {
+					construct_message(message);
+				}
+			});
+		}
+
+		function load_messages() {
+			fetch("{% url 'chatroom-ajax' other_user.id %}")
+				.then(e => e.json())
+				.then(messages => {
+					console.log(messages)
+					for (message of messages) {
+						construct_message(message);
+					}
+				})
+		}
+
+		function construct_message(message) {
+			let messages_container = document.querySelector(".messages-area");
+			let div = document.createElement("div");
+			let br = document.createElement("br");
+			div.classList.add("chat", message.className);
+			div.innerHTML = `
+							<p>${message.message}</p>
+	        `
+			messages_container.appendChild(div);
+			messages_container.appendChild(br);
+			div.scrollIntoView()
+		}
+		message_send_btn.addEventListener('click', send_message);
+		setInterval(load_messages, 2000);
 	</script>
 
 	<!-- End JS -->

@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from main import views as mainViews
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', mainViews.home, name = 'home'),
     path('register/', include('register.urls')),
+    path("menu/", mainViews.showMenu, name="showMenu"),
+    path("home/<int:pk>/", mainViews.chatroom, name="chatroom"),
+    path("home/ajax/<int:pk>/", mainViews.ajax_load_messages, name="chatroom-ajax"),
 ]

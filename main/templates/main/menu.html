@@ -7,58 +7,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-
-    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static '/css/menu.css' %}">
+    {% comment %} 
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}" /> {% endcomment %}
+    <link rel="stylesheet" href="{% static '/css/menu.css' %}" />
 </head>
 
 <body class="MenuPage">
     <header>
         <div class="logo">
-            <h1>LOGO</h1>
+            <img src="{% static '/images/logo.jpg' %}" alt="" />
         </div>
 
         <div class="heading">
             <span class="headingName">Cuisine Name</span>
         </div>
     </header>
-    <div class="ItemList">
-        <div class="dish">
-            <h4>Paneer Butter Masala <img src="{% static '/images/veg.jpg' %}" alt=""></h4>
-            <h5>₹ 200</h5>
 
-            <h6>Lorem ipsum dolor sit amet iaw ibaw.</h6>
+    <div class="itemList">
+        <div class="item">
+            <div class="left">
+                <span>P <img src="{% static '/images/veg.jpg' %}" alt=""> <br> <span class="price"> ₹
+                        249</span> </span>
+            </div>
+
+            <div class="right">
+                <div class="right-1">
+                    <button class="minus" onclick="decrement(this)">-</button>
+                    <input value=1 class="quantity" type="number" name="" id="quantity" min="1" max="10">
+                    <button class="plus" onclick="increment(this)">+</button> 
+                </div>
+
+                <div class="right-2">
+                    <button class="addbutton" onclick="add(this)"> ADD </button>
+                </div>
+            </div>
         </div>
 
-        <div class="dish">
-            <h4>Butter Chicken <img src="{% static '/images/non-veg.jpg' %}" alt=""></h4>
-            <h5>₹ 240</h5>
+        <div class="item">
+            <div class="left">
+                <span>Dal Fry <img src="{% static '/images/veg.jpg' %}" alt=""><br> <span class="price"> ₹ 199 </span>
+                </span>
+            </div>
 
-            <h6>Lorem ipsum dolor sit amet iaw ibaw.</h6>
+            <div class="right">
+                <div class="right-1">
+                    <button class="minus" onclick="decrement(this)">-</button>
+                    <input value=1 class="quantity" type="number" name="" id="quantity" min="1" max="10">
+                    <button class="plus" onclick="increment(this)">+</button> 
+                </div>
+
+                <div class="right-2">
+                    <button class="addbutton" onclick="add(this)"> ADD </button>
+                </div>
+            </div>
+
         </div>
-
-        <div class="dish">
-            <h4>Kaju Curry <img src="{% static '/images/veg.jpg' %}" alt=""></h4>
-            <h5>₹ 190</h5>
-
-            <h6>Lorem ipsum dolor sit amet iaw ibaw.</h6>
-        </div>
-
-        <div class="dish">
-            <h4> Paneer Lababdar <img src="{% static '/images/veg.jpg' %}" alt=""></h4>
-            <h5>₹ 220</h5>
-
-            <h6>Lorem ipsum dolor sit amet iaw ibaw.</h6>
-        </div>
-
-        <div class="dish">
-            <h4> Dal Fry <img src="{% static '/images/veg.jpg' %}" alt=""></h4>
-            <h5>₹ 160</h5>
-
-            <h6>Lorem ipsum dolor sit amet iaw ibaw.</h6>
-        </div>
-
     </div>
+
+    <script>
+        function increment(inc) {
+            inc.parentNode.childNodes[3].stepUp(1)
+        }
+        function decrement(dec) {
+
+            if(dec.parentNode.childNodes[3].value > 1){
+                dec.parentNode.childNodes[3].stepDown(1)
+            }else{
+                dec.parentNode.style.display = "none";
+                
+                dec.parentNode.parentNode.childNodes[3].style.display = "block";
+
+            }
+            
+        }
+
+        function add(order){
+            order.parentNode.style.display = "none";
+            order.parentNode.parentNode.childNodes[1].style.display = "block"
+        }
+    </script>
 
 </body>
 

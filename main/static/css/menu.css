@@ -16,8 +16,13 @@ body {
     display: none;
 }
 
-
 @media only screen and (max-width: 500px){
+
+    button{
+        outline: none;
+        border: none;
+        
+    }
 
     .MenuPage{
         display: block;
@@ -26,63 +31,90 @@ body {
         background-color: var(--black);
         font-family: "Raleway", sans-serif;
     }
+    .MenuPage .heading{
+        text-align: center;
+    }
 
-    .MenuPage .CuisineName{
+    .MenuPage .headingName{
         color: white;
         margin-left: 1em;
         font-family: "Raleway", sans-serif;
         letter-spacing: 3px;
-        border-bottom: 2px solid #ef6848;
+        border-bottom: 3px solid #ef6848;
         width: 8em;
         line-height: 2em;
+        font-size: 24px;
+        font-weight: bolder;
     }
 
-    .MenuPage .ItemList .dish{
-        margin: 1em;
+    .logo{
+        text-align: center;
+    }
+
+    .MenuPage .itemList .item{
+        background-color:  #212529;
         color: white;
-        /* padding-top: 1px; */
-        padding: 0.1em;
-        text-align: left;
-        background-color: #212529;
-        height: 4.5em;
-        line-height: 1px;
-        letter-spacing: 2px;
-        border-radius: 15px;
+        margin: 1em;
+        padding: 1em;
         box-shadow: 2px 2px 10px 3px black;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: 75% 25%;
+        grid-column-gap: 5%;
+        letter-spacing: 1.5px;
+        font-weight: 600;
     }
 
-    .MenuPage .ItemList .price{
+    .right-1{
+        display: none;
+    }
+
+    .addbutton{
+        border: none;
+        text-align: center;
+        color: white;
+        background-color: #ef6848;
+        height: 21px;
+        width: 55px;
+        border-radius: 10px;
+        font-weight:500;
+    }
+
+    .price{
         color: #ef6848;
     }
 
-    .MenuPage .ItemList .dish .wrapper{
-        display: flex;
+    .quantity{
+        width: 15px;
+        height: 18.8px;
+        background-color: #ef6848;
+        border: none;
+        font-size: 13px;
+        font-family: "Raleway", sans-serif;
+        color: white;
     }
 
-    .MenuPage .ItemList .dish .wrapper .item{
-        flex: 3;
-    }
-    .MenuPage .ItemList .dish .wrapper .b{
-        flex: 1;
-    }
-    
-
-    .MenuPage .ItemList .dish button{
-        width: 4em;
-        margin-top: 1em;
-        height: 1.2em;
+    .right .minus{
+        border: none;
+        text-align: center;
+        color: white;
+        background-color: #ef6848;
+        height: 21px;
+        width: 20px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-right: -6px;
     }
 
-    .MenuPage >.ItemList h5{
-        margin-left: 1em;
-        margin-top: 13px;
+    .right .plus{
+        border: none;
+        text-align: center;
+        color: white;
+        background-color: #ef6848;
+        height: 21px;
+        width: 20px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: -7px;
     }
-
-    .MenuPage .ItemList h6{
-        margin-left: 1em;
-        color: var(--orange);
-    }
-
-
-
 }
