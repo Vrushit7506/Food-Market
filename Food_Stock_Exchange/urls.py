@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from main import views as mainViews
-from registration import views as r
+from registration import views as registration
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('web.urls')),
-    path('registration/', r.registerPage, name="registration"),
-    path('register/', include('register.urls')),
+    path('register/', registration.registerPage, name="registration"),
+    path('accounts/login/', registration.registerPage1, name="registration"),
     path('home/', include('main.urls')),
     path("home/<int:pk>/", mainViews.chatroom, name="chatroom"),
     path("home/ajax1/<int:pk>/", mainViews.ajax_load_messages, name="chatroom-ajax"),

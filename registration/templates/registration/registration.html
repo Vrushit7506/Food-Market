@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,18 +21,15 @@
 
 <body class="RegistrationPage">
 
-    <div class="logo">
-        <img src="{% static '/images/logo.jpg' %}" alt="">
-    </div>
+    <header>
+        <img class="logo" src="{% static '/images/Logo/cover.png' %}" alt="" />
+    </header>
 
     <!-- Start Header -->
 
-    <header>
-        <!-- <a href="./home.html">Home Page</a> -->
+    <div class="heading">
         <h2>Register Here</h2>
-        <br> 
-        <hr>
-    </header>
+    </div>
 
     <!-- End Header -->
 
@@ -40,17 +38,8 @@
     <main class="input">
 
         <form class="details" method="POST" action="">
-            {% csrf_token %}    
-            <br>
-            {{form.username}}
-            <br>
-            {{form.email}}
-            <br> 
-            {{form.password1}}
-            <br>
-            {{form.password2}}
-
-            <br> 
+            {% csrf_token %}
+            {{ form|crispy }}
             <input type="submit" name="submit">
         </form>
 
@@ -68,8 +57,8 @@
 
     <script>
         var form_fields = document.getElementsByTagName('input')
-        form_fields[1].placeholder='Enter your Name';
-        form_fields[2].placeholder='Email-Id';
+        form_fields[1].placeholder = 'Enter your Name';
+        form_fields[2].placeholder = 'Email-Id';
         form_fields[3].placeholder = 'Password';
         form_fields[4].placeholder = 'Confirm Password';
 
@@ -78,4 +67,3 @@
 </body>
 
 </html>
-
