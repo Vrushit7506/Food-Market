@@ -27,7 +27,7 @@ SECRET_KEY = '9d^8y45m#1g!(nc*7i3rb$_b(-$^$=jha0xil&_mbt$44o@wq+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['barstockexchange.herokuapp.com/']
+ALLOWED_HOSTS = ['barstockexchange.herokuapp.com']
 
 
 # Application definition
