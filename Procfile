@@ -1,0 +1,1 @@
+web: gunnicorn Food_Stock_Exchange.wsgi
