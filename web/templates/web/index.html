@@ -28,17 +28,22 @@
         <div class="title Slide">
             <div class="header">
                 <h1>Bar Stock Exchange.</h1>
-                <p>Investigationes demonstraverunt lectores legere me ii legunt saepius etiam processus dynamicus
-                    sequitur
-                    mutationem.</p>
+                <p id="info">The <b> Bar Stock Exchange </b> is a dine-in ordering web application for mobile devices which helps people to order food or drinks in a club/restaurant.</p>
 
-                <a href="#project">read more</a>
+
+                <span id="read" onclick="readmore()">read more</span> 
             </div>
+            
+            <div id="q" class="qrcode">
+                <img src="{% static '/images/Landing/qr.jpg' %}" alt="">
+            </div>
+            
+
         </div>
 
         <div class="project Slide" id="project">
             <h2>Featured <b>projects.</b></h2>
-            <p>Qumonstraverunt lectores legere me ii legunt saepius.</p>
+            <p>Here are some Screenshots of our Web Application</p>
 
             <div class="gallery">
                 <div class="big">
@@ -49,7 +54,7 @@
                 </div>
             </div>
             <br><br>
-            <a href="">view QR code > </a>
+            <a href="#q">view QR code > </a>
         </div>
 
         <div class="features Slide">
@@ -133,6 +138,26 @@
             <span>© All right reserved 2018.</span>
             <span><a href="#">The Bar Stock Exchange</a></span>
         </div>
+
+
+        <script>
+            function readmore(){
+                
+                var information = document.getElementById("info");
+                var r = document.getElementById("read");
+                if(r.innerHTML == "read more"){
+                    r.innerHTML = "read less";
+
+                    information.innerHTML = "The Bar Stock Exchange is a dine-in ordering web application for mobile devices which helps people to order food or drinks in a club/restaurant. This software will be designed to increase restaurant customer interaction and not making them wait for the waiter to take their order. This software will be implementing a stock market theme for ordering the drinks. As in a stock market, more demand means higher prices similarly, the software should increase the price of the drink based on its demand.";
+                }else{
+                    information.innerHTML = "The Bar Stock Exchange is a dine-in ordering web application for mobile devices which helps people to order food or drinks in a club/restaurant. ";
+
+                    r.innerHTML = "read more";
+                }
+
+                
+            }
+        </script>
 
     </footer>
 

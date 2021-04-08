@@ -10,6 +10,7 @@ body {
   width: 100%;
   background-image: url("../images/Landing/bg-web.png");
   font-family: "Comfortaa", cursive;
+  
 }
 
 header {
@@ -25,6 +26,16 @@ header .logo {
 
 header .logo img {
   width: 100%;
+}
+
+.qrcode{
+  height: 200px;
+  width: 100px;
+  position: relative;
+  border-radius: 30px;
+  display: block;
+  top: -700px;
+  left: 900px;
 }
 
 main .Slide {
@@ -59,12 +70,12 @@ main .title .header p {
   width: 70%;
   color: #666d7a;
   font-weight: 400;
-  font-size: 1.875em;
-  line-height: 1.5;
+  font-size: 1.375em;
+  line-height: 1.6;
   margin-top: 0;
 }
 
-a {
+a, #read {
   position: relative;
   line-height: 1;
   display: inline-block;
@@ -79,7 +90,7 @@ a {
   transition: all 0.15s linear;
 }
 
-a::after {
+a::after, #read::after {
   content: "";
   display: block;
   border-radius: 30px;
@@ -95,11 +106,15 @@ a::after {
   opacity: 1;
 }
 
-a:hover {
+  #read:hover {
+    cursor: pointer;
+  }
+
+a:hover, #read:hover {
   color: #666d7a;
 }
 
-a:hover::after {
+a:hover::after, #read:hover::after {
   bottom: -7px;
   height: 4px;
 }
