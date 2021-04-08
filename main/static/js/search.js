@@ -55,15 +55,19 @@ function searchItem() {
     liEl[i].classList.remove("active");
   }
 
-  let li = document.createElement("li");
-  li.classList.add("liEl");
-  li.classList.add("active");
-  li.innerHTML = "Searched";
-  li.onclick = function () {
-    changePannel(this, "searched");
-  };
-  topHorizontal.insertBefore(li, newestLi);
-
+  var searchClass = document.getElementsByClassName("Searched");
+  if (searchClass.length == 0) {
+    let li = document.createElement("li");
+    li.classList.add("liEl");
+    li.classList.add("Searched");
+    li.classList.add("active");
+    li.innerHTML = "Searched";
+    li.onclick = function () {
+      changePannel(this, "searched");
+    };
+    topHorizontal.insertBefore(li, newestLi);
+  }
+  searchClass[0].classList.add("active");
   var pannel1 = document.getElementsByClassName("pannel");
   var pannel = document.getElementById("searched");
 
