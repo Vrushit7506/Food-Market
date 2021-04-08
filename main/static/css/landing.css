@@ -10,7 +10,6 @@ body {
   width: 100%;
   background-image: url("../images/Landing/bg-web.png");
   font-family: "Comfortaa", cursive;
-  
 }
 
 header {
@@ -28,7 +27,7 @@ header .logo img {
   width: 100%;
 }
 
-.qrcode{
+.qrcode {
   height: 200px;
   width: 100px;
   position: relative;
@@ -72,10 +71,12 @@ main .title .header p {
   font-weight: 400;
   font-size: 1.375em;
   line-height: 1.6;
+  max-width: 800px;
   margin-top: 0;
 }
 
-a, #read {
+a,
+#read {
   position: relative;
   line-height: 1;
   display: inline-block;
@@ -90,7 +91,8 @@ a, #read {
   transition: all 0.15s linear;
 }
 
-a::after, #read::after {
+a::after,
+#read::after {
   content: "";
   display: block;
   border-radius: 30px;
@@ -106,15 +108,17 @@ a::after, #read::after {
   opacity: 1;
 }
 
-  #read:hover {
-    cursor: pointer;
-  }
+#read:hover {
+  cursor: pointer;
+}
 
-a:hover, #read:hover {
+a:hover,
+#read:hover {
   color: #666d7a;
 }
 
-a:hover::after, #read:hover::after {
+a:hover::after,
+#read:hover::after {
   bottom: -7px;
   height: 4px;
 }

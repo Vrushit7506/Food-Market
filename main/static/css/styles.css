@@ -30,8 +30,8 @@ body {
 }
 
 .logo {
-  width: 60%;
   margin: 20px 0 !important;
+  height: 33px;
 }
 
 .logo img {
