@@ -220,10 +220,11 @@ def chatroom(request, pk: int):
 
         msg_price = send_reply_price(msg)
         msg_drink = send_reply_drink(msg1)
+        msg_confirm = dname + " ( " + dqty + " )" + " for " + dprice + " each."
 
-        bot_sends_msg = str(msg_price) + " " + str(msg_drink)
+        bot_sends_msg = msg_confirm + " |" + str(msg_drink) + "  |" + str(msg_price)
 
-        print(str(msg_price) + " " + str(msg_drink))
+        print(str(msg_drink) + " " + str(msg_price))
 
         m = Message.objects.create(receiver=request.user, sender=other_user, message=bot_sends_msg, className=msg_className)
 

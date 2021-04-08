@@ -161,6 +161,7 @@
   padding-top: 7px;
   margin-top: 5px;
   position: relative;
+  letter-spacing: -0.12em;
 }
 
 .chatBotPage .chattingArea .chat p::before {

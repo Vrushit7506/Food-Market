@@ -21,9 +21,9 @@ import decimal
 # 
 
 price = [
-  ['High', ['Bought In High']],
-  ['Low', ['Bought In Low']],
-  ['Neutral', ['Bought In Neutral']],
+  ['High', ['Just got your salary?', 'Are you sure you want to overpay?', "Finally got your Mom's Credit Card?"]],
+  ['Low', ['You caught me at the right time. You sure you wanna go ahead?', 'Hit YES for an instant one-up', 'Are you from Wall Street?']],
+  ['Neutral', ['Are you sure you wanna buy this drink?']],
 ]
 
 drink = [

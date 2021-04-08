@@ -224,7 +224,17 @@
 			{% for message in messages %}
 			<div class="chat 
 			    {{message.className}}">
-				<p>{{message.message}}</p>
+				<p>
+					{% for msg in message.message %}
+					{% if msg == "|" %}
+					<br>
+					{% elif msg == " " %}
+					&nbsp;
+					{% else %}
+					{{msg}}
+					{% endif %}
+					{% endfor %}
+				</p>
 			</div>
 			<br />
 			{% endfor %}
