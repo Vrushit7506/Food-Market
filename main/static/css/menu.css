@@ -68,6 +68,10 @@ body {
     text-align: center;
   }
 
+  .MenuPage .itemList {
+    overflow-y: scroll;
+  }
+
   .MenuPage .itemList .item {
     background-color: #212529;
     color: white;
