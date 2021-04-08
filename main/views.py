@@ -196,6 +196,7 @@ def chatroom(request, pk: int):
         dqty = request.POST['dqty']
         dprice = request.POST['dprice']
         dsavings = request.POST['dsavings']
+        dtype = request.POST['dtype']
 
         # print(dname, dqty, dprice, dsavings)
         # print("------------------------")
@@ -212,7 +213,7 @@ def chatroom(request, pk: int):
             msg = "High"
             msg_className = "rejected"
 
-        msg1 = str(dname)
+        msg1 = str(dtype)
 
         print(msg1)
         print(msg_className, Decimal(dsavings) > 0)
