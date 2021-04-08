@@ -20,7 +20,7 @@ from registration import views as registration
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('vv21/admin/', admin.site.urls),
     path('', include('web.urls')),
     path('register/', registration.registerPage, name="registration"),
     path('accounts/login/', registration.registerPage1, name="registration"),
