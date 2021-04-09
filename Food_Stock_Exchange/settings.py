@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'registration.apps.RegistrationConfig',
     'web.apps.WebConfig',
     'crispy_forms',
+    'import_export',
 ]
 
 MIDDLEWARE = [
