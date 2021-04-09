@@ -317,6 +317,7 @@ def search_view(request):
 
 
 def order(request):
-    global pk1
+    pk1 = request.user.pk
+    print(pk1)
     all_ordered = ordered.objects.all().filter(user = pk1)
     return render(request, "main/order.html", {"all_ordered": all_ordered})
