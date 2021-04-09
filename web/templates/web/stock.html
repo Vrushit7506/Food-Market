@@ -61,21 +61,6 @@
 
 		{% endfor %}
 
-		{% for drink in all_drinks %}
-
-		<tr>
-			<td>{{drink.drinktype}}</td>
-			<td>{{drink.name}}</td>
-			<td class="{{drink.className}}">₹ {{drink.current_price}}</td>
-			<td>{{drink.tot_qty}}</td>
-			<td>₹ {{drink.actual_price}}</td>
-			<td>{{drink.savings}}</td>
-			<td>₹ {{drink.low}}</td>
-			<td>₹ {{drink.high}}</td>
-		</tr>
-
-		{% endfor %}
-
 	</table>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -102,7 +87,7 @@
 			setTimeout(f, 2000);
 		}
 
-		var Height = scrollStock.offsetHeight + 40;
+		var Height = scrollStock.offsetHeight + 1500;
 		var i = 1, j = Height, status = 0;
 		scrollpage();
 	</script>
@@ -139,25 +124,10 @@
 							</tr>
 						`
 					}
-
-					for (order of allorder) {
-						scrollStock.innerHTML += `
-							<tr>
-								<td>${order.fields.drinktype}</td>
-								<td>${order.fields.name}</td>
-								<td class="${order.fields.className}">₹ ${order.fields.current_price}</td>
-								<td>${order.fields.tot_qty}</td>
-								<td>₹ ${order.fields.actual_price}</td>
-								<td>${order.fields.savings}</td>
-								<td>₹ ${order.fields.low}</td>
-								<td>₹ ${order.fields.high}</td>
-							</tr>
-						`
-					}
 				})
 		}
 
-		setInterval(getPage, 2000);
+		setInterval(getPage, 5000);
 	</script>
 
 </body>

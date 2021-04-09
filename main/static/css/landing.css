@@ -49,6 +49,11 @@ main .title {
 
 main .title .header {
   margin: 200px auto;
+  background-image: url("../images/Landing/qr.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  background-position: right;
+  height: 600px;
 }
 
 main .title .header h1 {
@@ -225,7 +230,7 @@ main .features p {
 
 main .features .slideshow {
   position: relative;
-  padding: 120px 240px 120px 120px;
+  padding: 120px 0px 120px 120px;
   background-color: #fff;
   box-shadow: 5px 0 60px 0 rgb(61 67 79 / 8%);
   border-radius: 40px;
@@ -363,4 +368,34 @@ footer .copyright a {
   font-weight: 900;
   font-size: 14px;
   text-decoration: none;
+}
+
+main .features1 .slideshow {
+  position: relative;
+  padding: 45px 45px 45px 70px;
+  background-color: #fff;
+  box-shadow: 5px 0 60px 0 rgb(61 67 79 / 8%);
+  border-radius: 40px;
+  margin-bottom: 100px;
+  width: 37%;
+}
+
+main .features1.Slide {
+  min-height: 270px;
+}
+
+main .features1.Slide h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+main .features1 .slideshow .slides .names {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  column-gap: 10%;
+}
+
+main .features1 .slideshow .slides .names span {
+  display: inline-block;
+  width: 10px;
 }

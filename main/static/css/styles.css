@@ -31,7 +31,7 @@ body {
 
 .logo {
   margin: 20px 0 !important;
-  height: 33px;
+  width: 60%;
 }
 
 .logo img {
